@@ -66,6 +66,9 @@ Cons :
 # node server.js
 
 Server running at: http://localhost:3000
+
+In browser we can access the web page client : http://localhost:3000
+
 ```
 
 
@@ -81,6 +84,8 @@ Server running at: http://localhost:3000
 #### High level design/solution approach
 * Built single component using Spring boot (Kotlin) as REST service with two end points. REST BACKEND SERVER
 ```
+Swagger : http://localhost:8080/swagger-ui.html#
+
 POST : http://localhost:8080/analyze
 
 Request Body :
