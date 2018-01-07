@@ -53,13 +53,60 @@ Cons :
 
 
 
-#### Limitations/TODOs
-* Making the domain links verification cacheable.
+#### Improvements / TODOs
+* Making the domain links verification cacheable + persistence.
 * Asynchronously loading the links verification data from web client.
 * Hardcoded the web page analysis REST server url in web client code.
+* Extract the Web Page Analyzer component as small sub project.
+* Need to write more test cases for different use cases.
+* Refactor the web client code.
 
 #### High level design/solution approach
-* Built single component using Spring boot (Kotlin) as REST service.
+* Built single component using Spring boot (Kotlin) as REST service with two end points.
+```
+POST : http://localhost:8080/analyze
+
+Request Body :
+{
+  "url": "string"
+}
+
+Response :
+{
+  "containsLoginForm": true,
+  "headingTags": [
+    {
+      "count": 0,
+      "headerName": "string"
+    }
+  ],
+  "htmlVersion": "string",
+  "numOfExternalLinks": 0,
+  "numOfInternalLinks": 0,
+  "resourceDetails": [
+    {
+      "httpResponseCode": 0,
+      "link": "string",
+      "webPageStatus": "string"
+    }
+  ],
+  "title": "string",
+  "uri": "string"
+}
+
+GET : http://localhost:8080/verifyLinks?url=http://test.com&startRecord=0&limit=10
+
+Response :
+
+[
+  {
+    "httpResponseCode": 0,
+    "link": "string",
+    "webPageStatus": "string"
+  }
+]
+
+```
 * Defined the domain model to represent the analysis report result.
 * Used Jsoup for traversing the HTML DOM tree
 * Used the Hapi server as a web client server to communicate with backend REST server, if suppose team decided to change the UI technology it will not affect the backend REST server.Backend REST server is completely independent and decoupled from UI server.
