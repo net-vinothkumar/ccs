@@ -62,7 +62,7 @@ Cons :
 * Refactor the web client code.
 
 #### High level design/solution approach
-* Built single component using Spring boot (Kotlin) as REST service with two end points.
+* Built single component using Spring boot (Kotlin) as REST service with two end points. REST BACKEND SERVER
 ```
 POST : http://localhost:8080/analyze
 
@@ -107,9 +107,12 @@ Response :
 ]
 
 ```
+* HAPI JS Frontend Server communicates with REST Backend Server and post/get the request ,receive the JSON response and prepare the view.
 * Defined the domain model to represent the analysis report result.
 * Used Jsoup for traversing the HTML DOM tree
 * Used the Hapi server as a web client server to communicate with backend REST server, if suppose team decided to change the UI technology it will not affect the backend REST server.Backend REST server is completely independent and decoupled from UI server.
+* UI developed using HTML + Bootstrap + JQuery.
+
 
 
 
