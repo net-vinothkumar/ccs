@@ -44,11 +44,28 @@ Cons :
 # cd webanalyzer-backend
 # gradle bootRun
 
+ .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+2018-01-07 20:52:02.655  INFO 8200 --- [           main] d.c.c.WebPageAnalyzerApplicationKt       : Starting WebPageAnalyzerApplicationKt on users-MacBook-Pro.local with PID 8200 (/Users/user/workspace/scout24/git/ccs/webanalyzer-backend/build/classes/main started by user in /Users/user/workspace/scout24/git/ccs/webanalyzer-backend)
+....
+2018-01-07 20:52:07.810  INFO 8200 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-01-07 20:52:07.838  INFO 8200 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-01-07 20:52:08.265  INFO 8200 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-01-07 20:52:08.274  INFO 8200 --- [           main] d.c.c.WebPageAnalyzerApplicationKt       : Started WebPageAnalyzerApplicationKt in 6.463 seconds (JVM running 
+
 #### How to run web client
 
 # cd  webanalyzer-frontend
 # npm install
 # node server.js
+
+Server running at: http://localhost:3000
 ```
 
 
