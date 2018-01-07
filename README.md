@@ -106,6 +106,11 @@ Response :
   }
 ]
 
+Note : 
+'url' = web page that needs to be analyzed, 
+'startRecord' = from which record the client wants from the server to get the verification link details.i.e first time it will be 0 ,then 10 ,20 ,30 ..so that the client can get the next chunk of records.[as an improvement this should be made as configurable.]
+'limit' = number of records in each request that need to returned by server.i.e server will only verify next 10 links and send the results.
+
 ```
 * HAPI JS Frontend Server communicates with REST Backend Server and post/get the request ,receive the JSON response and prepare the view.
 * Defined the domain model to represent the analysis report result.
