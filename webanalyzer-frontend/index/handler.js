@@ -39,7 +39,6 @@ const Handler = {
 
       Request(options, function (error, response, body) {
           var statusCode = response ? response.statusCode : HttpStatus.SERVICE_UNAVAILABLE;
-
           reply(response.body);
       });
     }
