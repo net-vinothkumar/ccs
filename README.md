@@ -18,7 +18,7 @@ Following are the solutions I had  and implemented the first solution.
 ### 2.Pagination :
 
 	Pros :
-		The response will be faster , user can see the web page details + a part of verification links results.
+		The response will be faster , user can see the web page details + a part of verification links results and also compare the different results.
 	Cons :
 		User has to click the next page button to view the verification link results.
 		User has to remember which page has the a particular link results.
