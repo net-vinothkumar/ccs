@@ -21,8 +21,11 @@ const Handler = {
 
       Request(options, function (error, response, body) {
           var statusCode = response ? response.statusCode : HttpStatus.SERVICE_UNAVAILABLE;
-          console.log(response.body);
-          reply.view('analysisresult', response.body);
+          if(statusCode == 503){
+            reply.view('error');
+          } else {
+            reply.view('analysisresult', response.body);
+          }
       });
     }
   },
@@ -36,6 +39,7 @@ const Handler = {
 
       Request(options, function (error, response, body) {
           var statusCode = response ? response.statusCode : HttpStatus.SERVICE_UNAVAILABLE;
+
           reply(response.body);
       });
     }

@@ -15,8 +15,7 @@ class HyperLinksExtractor {
         fun getHyperLinksCollection(document: Document): Set<String> {
 
             val hyperLinks = document.select("a[href]")
-                    .map { it.attr("abs:href") }
-                    .filter<String> { null != it }.toSet()
+                    .map { it.attr("abs:href") }.toSet()
 
             return hyperLinks
         }

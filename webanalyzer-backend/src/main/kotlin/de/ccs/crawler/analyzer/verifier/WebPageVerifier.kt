@@ -35,10 +35,10 @@ class WebPageVerifier constructor(private val resourceList: List<String>) : Call
     }
 
     private fun getResponseCode(url: String, timeout: Int): LinkStatus {
-        var url = url
-        url = url.replaceFirst("^https".toRegex(), "http")
+        var modifiedUrl = url
+        modifiedUrl = url.replaceFirst("^https".toRegex(), "http")
         try {
-            val connection = URL(url).openConnection() as HttpURLConnection
+            val connection = URL(modifiedUrl).openConnection() as HttpURLConnection
             connection.connectTimeout = timeout
             connection.readTimeout = timeout
             connection.requestMethod = "HEAD"

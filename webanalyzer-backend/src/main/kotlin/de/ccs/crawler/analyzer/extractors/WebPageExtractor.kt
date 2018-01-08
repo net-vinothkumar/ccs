@@ -14,7 +14,7 @@ class WebPageExtractor {
 
             return nods
                         .filterIsInstance<DocumentType>()
-                        .map { it as DocumentType }
+                        .map { it }
                         .firstOrNull()
                         ?.toString()
                         ?: ""
