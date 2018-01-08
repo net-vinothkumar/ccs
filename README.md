@@ -21,15 +21,14 @@ Following are the solutions I had  and implemented the first solution.
 		The response will be faster , user can see the web page details + a part of verification links results.
 	Cons :
 		User has to click the next page button to view the verification link results.
-		User has to remember which page has the a particular link results
+		User has to remember which page has the a particular link results.
 		
-### 3.Complete the entire task in single request :
-Complete the collection of web page details and verifying the links in a single request
+### 3.Complete the collection of web page details and verifying the links in a single request :
 
-Pros :
-	In single view the user can see the entire results.
-Cons :
-	Though the user can view the entire results in one request ,the user has to wait for a long time to view the results
+	Pros :
+		In single view the user can see the entire results.
+	Cons :
+		Though the user can view the entire results in one request ,the user has to wait for a long time to view the results.
 
 #### Installations
 
@@ -80,6 +79,7 @@ In browser we can access the web page client : http://localhost:3000
 * Extract the Web Page Analyzer component as small sub project.
 * Need to write more test cases for different use cases.
 * Refactor the web client code.
+* Implement the error page in web client.
 
 #### High level design/solution approach
 * Built single component using Spring boot (Kotlin) as REST service with two end points. REST BACKEND SERVER
