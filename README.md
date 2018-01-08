@@ -7,7 +7,7 @@ Following are the solutions I had  and implemented the first solution.
 ### 1.Dynamically update the web client page with the verification link details when the user scrolls the web page.
 
 	Pros :
-		a.The response will be faster , user can see the web page details + a part of verification link results [i.e limited 10 records / scroll]
+		a.The response will be faster , user can see the web page details + a part of verification link results [i.e limited 10 records per scroll]
 		
 		b.If the user wants to see further verification link results, user can scroll to view the 
 		dynamically updated results.
